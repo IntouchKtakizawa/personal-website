@@ -152,6 +152,7 @@ body {
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 24px;
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .card p {
@@ -211,6 +212,12 @@ body {
   color: #f0f3f6;
 }
 
+.skill-card:hover {
+  border-color: var(--accent-dim);
+  transform: translateY(-2px);
+  box-shadow: 0 0 0 1px var(--accent-dim);
+}
+
 /* Projects */
 .projects-grid {
   display: grid;
@@ -229,6 +236,17 @@ body {
 .project-card:hover {
   border-color: var(--accent-dim);
   transform: translateY(-2px);
+}
+
+.project-image {
+  display: block;
+  width: calc(100% + 48px);
+  margin: -24px -24px 16px;
+  max-width: none;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  border-bottom: 1px solid var(--border);
 }
 
 .project-head {
@@ -320,6 +338,12 @@ a.project-link:hover {
 
 .timeline-item:last-child {
   margin-bottom: 0;
+}
+
+.timeline-item .card:hover {
+  border-color: var(--accent-dim);
+  transform: translateY(-2px);
+  box-shadow: 0 0 0 1px var(--accent-dim);
 }
 
 .timeline-dot {
