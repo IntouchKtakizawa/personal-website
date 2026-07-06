@@ -199,6 +199,32 @@ body {
   margin-bottom: 4px;
 }
 
+.stat-list {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.stat-list li {
+  color: var(--text-dim);
+  padding-left: 16px;
+  position: relative;
+}
+
+.stat-list li::before {
+  content: "\2192";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+#chess > .card {
+  margin-bottom: 16px;
+}
+
 /* Skills */
 .skills-grid {
   display: grid;
