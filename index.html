@@ -29,14 +29,24 @@
 <main>
 
   <section class="hero">
-    <p class="prompt">visitor@kenta-site:~$ whoami</p>
-    <h1>Intouch Kenta Takizawa</h1>
-    <p class="role"><span id="typed"></span><span class="cursor">_</span></p>
-    <p class="location">Year 10 &middot; Satit Prasarnmit International Programme (Secondary) &middot; Bangkok</p>
+    <div class="terminal-window">
+      <div class="terminal-titlebar">
+        <span class="terminal-dot dot-red"></span>
+        <span class="terminal-dot dot-yellow"></span>
+        <span class="terminal-dot dot-green"></span>
+        <span class="terminal-title">visitor@kenta-site &mdash; zsh</span>
+      </div>
+      <div class="terminal-body">
+        <p class="prompt">visitor@kenta-site:~$ whoami</p>
+        <h1>Intouch Kenta Takizawa</h1>
+        <p class="role"><span id="typed"></span><span class="cursor">_</span></p>
+        <p class="location">Year 10 &middot; Satit Prasarnmit International Programme (Secondary) &middot; Bangkok</p>
+      </div>
+    </div>
   </section>
 
   <section id="about" class="section">
-    <h2><span class="tag">01</span> about</h2>
+    <h2><span class="tag">01</span><span class="cmd">cat <span class="cmd-target">about.md</span></span></h2>
     <div class="card">
       <p>
         Kenta Takizawa is a Year 10 student at SPIP (Bangkok) with a passion for engineering,
@@ -62,16 +72,16 @@
   </section>
 
   <section id="skills" class="section">
-    <h2><span class="tag">02</span> skills</h2>
+    <h2><span class="tag">02</span><span class="cmd">ls <span class="cmd-target">skills/</span></span></h2>
     <div class="skills-grid">
 
       <div class="card skill-card">
-        <h3>Music Production</h3>
+        <h3><span class="skill-icon" aria-hidden="true">&#127925;</span> Music Production</h3>
         <div class="pills"><span class="pill">GarageBand</span></div>
       </div>
 
       <div class="card skill-card">
-        <h3>Instruments</h3>
+        <h3><span class="skill-icon" aria-hidden="true">&#127928;</span> Instruments</h3>
         <div class="pills">
           <span class="pill">Guitar</span>
           <span class="pill">Drums</span>
@@ -79,7 +89,7 @@
       </div>
 
       <div class="card skill-card">
-        <h3>Video &amp; Film</h3>
+        <h3><span class="skill-icon" aria-hidden="true">&#127916;</span> Video &amp; Film</h3>
         <div class="pills">
           <span class="pill">CapCut</span>
           <span class="pill">Filmmaking</span>
@@ -88,7 +98,7 @@
       </div>
 
       <div class="card skill-card">
-        <h3>Programming</h3>
+        <h3><span class="skill-icon" aria-hidden="true">&#128187;</span> Programming</h3>
         <div class="pills">
           <span class="pill">Python (basic)</span>
           <span class="pill">Scratch</span>
@@ -96,7 +106,7 @@
       </div>
 
       <div class="card skill-card">
-        <h3>Theatre Technical Direction</h3>
+        <h3><span class="skill-icon" aria-hidden="true">&#127917;</span> Theatre Technical Direction</h3>
         <div class="pills">
           <span class="pill">Lighting (basic)</span>
           <span class="pill">QLab</span>
@@ -105,7 +115,7 @@
       </div>
 
       <div class="card skill-card">
-        <h3>Web / App Development</h3>
+        <h3><span class="skill-icon" aria-hidden="true">&#127760;</span> Web / App Development</h3>
         <div class="pills">
           <span class="pill">OpenStreetMap</span>
           <span class="pill">OSRM</span>
@@ -114,7 +124,7 @@
       </div>
 
       <div class="card skill-card">
-        <h3>AI-Assisted Development</h3>
+        <h3><span class="skill-icon" aria-hidden="true">&#129302;</span> AI-Assisted Development</h3>
         <div class="pills">
           <span class="pill">Claude</span>
           <span class="pill">ChatGPT</span>
@@ -127,7 +137,7 @@
   </section>
 
   <section id="projects" class="section">
-    <h2><span class="tag">03</span> projects</h2>
+    <h2><span class="tag">03</span><span class="cmd">ls -la <span class="cmd-target">projects/</span></span></h2>
     <div class="projects-grid">
 
       <a class="card project-card" href="https://scratch.mit.edu/projects/893676050/" target="_blank" rel="noopener noreferrer">
@@ -138,13 +148,15 @@
         <p>A zombie survival game built in Scratch (currently in open beta), exploring early programming logic and game design.</p>
       </a>
 
-      <a class="card project-card" href="https://github.com/IntouchKtakizawa/Midpoint" target="_blank" rel="noopener noreferrer">
+      <a class="card project-card featured" href="https://github.com/IntouchKtakizawa/Midpoint" target="_blank" rel="noopener noreferrer">
+        <span class="featured-badge">Flagship Project</span>
         <img class="project-image" src="images/midpoint-demo.jpg" alt="Midpoint app showing a map with ranked meeting-point suggestions in Bangkok" loading="lazy">
         <div class="project-head">
           <h3>Midpoint</h3>
           <span class="project-link">GitHub &#8599;</span>
         </div>
-        <p>Passion project &mdash; finds a fair, convenient meeting spot for two or more people using OpenStreetMap and OSRM for real travel-time ranking.</p>
+        <p>Passion project &mdash; finds a fair, convenient meeting spot for two or more people using OpenStreetMap and OSRM for real travel-time ranking, with live constraint-solving across everyone's transit options.</p>
+        <p class="why-line"><strong>Why OSRM, not Google Maps?</strong> The Distance Matrix API racks up real cost at scale. OSRM keeps the whole stack free and self-hostable &mdash; a deliberate engineering tradeoff, not a limitation.</p>
       </a>
 
       <div class="card project-card">
@@ -175,7 +187,7 @@
   </section>
 
   <section id="experience" class="section">
-    <h2><span class="tag">04</span> experience</h2>
+    <h2><span class="tag">04</span><span class="cmd">cat <span class="cmd-target">experience.log</span></span></h2>
 
     <h3 class="subheading">Current</h3>
     <div class="timeline">
@@ -300,7 +312,7 @@
   </section>
 
   <section id="achievements" class="section">
-    <h2><span class="tag">05</span> academic achievements</h2>
+    <h2><span class="tag">05</span><span class="cmd">cat <span class="cmd-target">achievements.md</span></span></h2>
     <div class="timeline">
 
       <div class="timeline-item">
@@ -339,7 +351,7 @@
   </section>
 
   <section id="music" class="section">
-    <h2><span class="tag">06</span> music</h2>
+    <h2><span class="tag">06</span><span class="cmd">afplay <span class="cmd-target">music/</span></span></h2>
     <div class="card">
       <p>
         Multi-instrumentalist playing <strong>guitar</strong> and <strong>drums</strong>. Likes
@@ -363,7 +375,7 @@
   </section>
 
   <section id="chess" class="section">
-    <h2><span class="tag">07</span> chess</h2>
+    <h2><span class="tag">07</span><span class="cmd">chess <span class="cmd-target">--stats</span></span></h2>
     <div class="card">
       <p>Enjoys playing chess and used to compete in tournaments.</p>
     </div>
@@ -437,7 +449,7 @@
   </section>
 
   <section id="goals" class="section">
-    <h2><span class="tag">08</span> looking ahead</h2>
+    <h2><span class="tag">08</span><span class="cmd">cat <span class="cmd-target">goals.md</span></span></h2>
     <div class="card">
       <p>
         Building toward a future in <strong>biomedical and aerospace engineering</strong>, with
@@ -447,7 +459,7 @@
   </section>
 
   <section id="contact" class="section">
-    <h2><span class="tag">09</span> contact</h2>
+    <h2><span class="tag">09</span><span class="cmd">whois <span class="cmd-target">kenta</span></span></h2>
     <div class="card contact-card">
       <p>Reach out anytime.</p>
       <a class="email-link" href="mailto:intouch.k.takizawa@gmail.com">intouch.k.takizawa@gmail.com</a>
@@ -459,7 +471,7 @@
 
 <footer class="footer">
   <p>&copy; <span id="year"></span> Intouch Kenta Takizawa</p>
-  <p class="last-updated">Last updated: July 6, 2026 at 1:06 PM</p>
+  <p class="last-updated">Last updated: July 6, 2026 at 3:47 PM</p>
 </footer>
 
 <script src="script.js"></script>
