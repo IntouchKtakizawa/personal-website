@@ -565,6 +565,35 @@ a.project-link:hover {
   border-color: var(--accent);
 }
 
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(0, 255, 157, 0.45);
+    transform: translateY(0);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(0, 255, 157, 0);
+    transform: translateY(-1px);
+  }
+}
+
+.story-toggle[aria-expanded="false"],
+.game-start-btn {
+  animation: pulse-glow 2.2s ease-in-out infinite;
+}
+
+.story-toggle[aria-expanded="false"]:hover,
+.game-start-btn:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .story-toggle[aria-expanded="false"],
+  .game-start-btn,
+  .game-toggle-btn[aria-expanded="false"] {
+    animation: none;
+  }
+}
+
 .story-toggle-icon {
   display: inline-block;
   transition: transform 0.2s ease;
@@ -668,10 +697,24 @@ a.project-link:hover {
   transition: border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
 }
 
+@keyframes pulse-glow-fab {
+  0%, 100% {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 0 0 rgba(0, 255, 157, 0.45);
+  }
+  50% {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 0 7px rgba(0, 255, 157, 0);
+  }
+}
+
+.game-toggle-btn[aria-expanded="false"] {
+  animation: pulse-glow-fab 2.2s ease-in-out infinite;
+}
+
 .game-toggle-btn:hover {
   border-color: var(--accent);
   color: var(--accent);
   transform: translateY(-2px);
+  animation-play-state: paused;
 }
 
 .game-panel {
