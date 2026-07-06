@@ -2,7 +2,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 const roles = [
   "Theatre Tech Director",
-  "Guitarist / Bassist / Drummer",
+  "Guitarist / Drummer",
   "Music Producer",
   "Aspiring Biomedical & Aerospace Engineer",
   "Filmmaker",
