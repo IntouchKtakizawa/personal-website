@@ -424,6 +424,62 @@ a.project-link:hover {
   border: 1px solid var(--border);
 }
 
+/* Story toggle */
+.story-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  background: transparent;
+  border: 1px solid var(--accent-dim);
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.story-toggle:hover {
+  background: rgba(0, 255, 157, 0.08);
+  border-color: var(--accent);
+}
+
+.story-toggle-icon {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.story-toggle[aria-expanded="true"] .story-toggle-icon {
+  transform: rotate(90deg);
+}
+
+.story-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+}
+
+.story-content.is-open {
+  max-height: 600px;
+  opacity: 1;
+}
+
+.story-inner {
+  min-height: 0;
+}
+
+.story-inner p {
+  color: var(--text-dim);
+  margin: 12px 0 0;
+}
+
+.story-inner p:first-child {
+  margin-top: 16px;
+}
+
 /* Contact */
 .contact-card {
   display: flex;

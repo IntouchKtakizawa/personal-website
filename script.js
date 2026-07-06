@@ -37,3 +37,11 @@ function tick() {
 }
 
 tick();
+
+document.querySelectorAll(".story-toggle").forEach((button) => {
+  const content = button.nextElementSibling;
+  button.addEventListener("click", () => {
+    const isOpen = content.classList.toggle("is-open");
+    button.setAttribute("aria-expanded", String(isOpen));
+  });
+});
