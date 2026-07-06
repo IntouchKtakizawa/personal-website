@@ -238,6 +238,12 @@ body {
   color: #f0f3f6;
 }
 
+.skill-note {
+  margin: 12px 0 0;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+
 .skill-card:hover {
   border-color: var(--accent-dim);
   transform: translateY(-2px);
