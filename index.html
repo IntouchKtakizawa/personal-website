@@ -148,16 +148,29 @@
         <p>A zombie survival game built in Scratch (currently in open beta), exploring early programming logic and game design.</p>
       </a>
 
-      <a class="card project-card featured" href="https://github.com/IntouchKtakizawa/Midpoint" target="_blank" rel="noopener noreferrer">
+      <div class="card project-card featured">
         <span class="featured-badge">Flagship Project</span>
         <img class="project-image" src="images/midpoint-demo.jpg" alt="Midpoint app showing a map with ranked meeting-point suggestions in Bangkok" loading="lazy">
         <div class="project-head">
           <h3>Midpoint</h3>
-          <span class="project-link">GitHub &#8599;</span>
+          <a class="project-link" href="https://github.com/IntouchKtakizawa/Midpoint" target="_blank" rel="noopener noreferrer">GitHub &#8599;</a>
         </div>
         <p>Passion project &mdash; finds a fair, convenient meeting spot for two or more people using OpenStreetMap and OSRM for real travel-time ranking, with live constraint-solving across everyone's transit options.</p>
         <p class="why-line"><strong>Why OSRM, not Google Maps?</strong> The Distance Matrix API racks up real cost at scale. OSRM keeps the whole stack free and self-hostable &mdash; a deliberate engineering tradeoff, not a limitation.</p>
-      </a>
+        <button class="story-toggle" type="button" aria-expanded="false">
+          <span class="story-toggle-icon">&gt;</span> ./why-midpoint.sh
+        </button>
+        <div class="story-content">
+          <div class="story-inner">
+            <p>
+              Why build this? Meeting up with friends always turned into the same argument &mdash;
+              someone picks a spot, and it's usually convenient for them, not everyone. I wanted to
+              replace that with a calculation: rank locations by actual travel time for every
+              person involved, so the "fair" spot isn't just whoever spoke first.
+            </p>
+          </div>
+        </div>
+      </div>
 
       <div class="card project-card">
         <div class="project-head">
@@ -497,7 +510,7 @@
 
 <footer class="footer">
   <p>&copy; <span id="year"></span> Intouch Kenta Takizawa</p>
-  <p class="last-updated">Last updated: July 6, 2026 at 5:04 PM</p>
+  <p class="last-updated">Last updated: July 7, 2026 at 10:45 AM</p>
 </footer>
 
 <div class="game-widget">
