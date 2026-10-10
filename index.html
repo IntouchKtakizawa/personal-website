@@ -144,18 +144,27 @@
 
   <section id="projects" class="section">
     <h2><span class="tag">03</span><span class="cmd">Ls -la <span class="cmd-target">Projects/</span></span></h2>
-    <div class="projects-grid">
+    <div class="card project-card featured">
+      <span class="featured-badge">Flagship Project</span>
+      <a class="featured-github" href="https://github.com/IntouchKtakizawa/stagewrite-ai" target="_blank" rel="noopener noreferrer" aria-label="View StageWrite AI on GitHub">GitHub &#8599;</a>
+      <img class="project-image" src="images/stagewrite-ai.png" alt="StageWrite AI logo" loading="lazy">
+      <div class="project-head">
+        <h3>StageWrite AI</h3>
+      </div>
+      <p>An all-in-one music writing assistant that helps musicians develop ideas instead of generating entire songs for them. It combines intelligent chord progression generation, chord recognition, interactive instrument diagrams, realistic playback, rhythm tools, a metronome, and MIDI features in one workspace.</p>
+      <p class="why-line"><strong>Why assist musicians, not replace them?</strong> Most AI music tools focus on generating finished music. I wanted StageWrite AI to work differently: I give it my musical ideas, and it helps me explore chords, voicings, rhythms, and arrangements while I stay in control of the actual composition.</p>
+      <div class="project-links project-cta-row">
+        <a href="https://intouchktakizawa.github.io/stagewrite-ai/" target="_blank" rel="noopener noreferrer" class="project-button">Open StageWrite AI &#8599;</a>
+      </div>
+    </div>
 
-      <a class="card project-card" href="https://scratch.mit.edu/projects/893676050/" target="_blank" rel="noopener noreferrer">
-        <div class="project-head">
-          <h3>ZOMBIE Invader</h3>
-          <span class="project-link">scratch.mit.edu &#8599;</span>
-        </div>
-        <p>A zombie survival game built in Scratch (currently in open beta), exploring early programming logic and game design.</p>
-      </a>
+    <button class="other-projects-toggle" id="other-projects-toggle" type="button" aria-expanded="false" aria-controls="other-projects">
+      <span class="other-projects-icon" aria-hidden="true">&gt;</span>
+      Other projects
+    </button>
 
-      <div class="card project-card featured">
-        <span class="featured-badge">Flagship Project</span>
+    <div class="projects-grid other-projects-grid" id="other-projects" hidden>
+      <div class="card project-card">
         <img class="project-image" src="images/midpoint-demo.jpg" alt="Midpoint app showing a map with ranked meeting-point suggestions in Bangkok" loading="lazy">
         <div class="project-head">
           <h3>Midpoint</h3>
@@ -181,6 +190,14 @@
         </div>
       </div>
 
+      <a class="card project-card" href="https://scratch.mit.edu/projects/893676050/" target="_blank" rel="noopener noreferrer">
+        <div class="project-head">
+          <h3>ZOMBIE Invader</h3>
+          <span class="project-link">scratch.mit.edu &#8599;</span>
+        </div>
+        <p>A zombie survival game built in Scratch (currently in open beta), exploring early programming logic and game design.</p>
+      </a>
+
       <div class="card project-card">
         <div class="project-head">
           <h3>AlgosTheComic</h3>
@@ -204,7 +221,6 @@
           <a href="https://www.instagram.com/algosthecomic/" target="_blank" rel="noopener noreferrer" class="project-link">Instagram &#8599;</a>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -558,7 +574,7 @@
 
 <footer class="footer">
   <p>&copy; <span id="year"></span> Intouch Kenta Takizawa</p>
-  <p class="last-updated">Last updated: September 17, 2026</p>
+  <p class="last-updated">Last updated: October 10, 2026</p>
 </footer>
 
 <div class="game-widget">

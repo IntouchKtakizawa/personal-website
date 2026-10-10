@@ -46,6 +46,17 @@ document.querySelectorAll(".story-toggle").forEach((button) => {
   });
 });
 
+const otherProjectsToggle = document.getElementById("other-projects-toggle");
+const otherProjects = document.getElementById("other-projects");
+
+if (otherProjectsToggle && otherProjects) {
+  otherProjectsToggle.addEventListener("click", () => {
+    const isOpen = otherProjectsToggle.getAttribute("aria-expanded") === "true";
+    otherProjectsToggle.setAttribute("aria-expanded", String(!isOpen));
+    otherProjects.hidden = isOpen;
+  });
+}
+
 (() => {
   const canvas = document.getElementById("snake-canvas");
   if (!canvas) return;

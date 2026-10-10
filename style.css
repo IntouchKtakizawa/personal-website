@@ -316,8 +316,7 @@ body {
 /* Projects */
 .projects-grid {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-auto-flow: dense;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: start;
   gap: 16px;
 }
@@ -343,9 +342,8 @@ body {
 }
 
 .project-card.featured {
-  grid-column: 2;
-  grid-row: span 2;
   border-color: var(--accent-dim);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.22);
 }
 
 .featured-badge {
@@ -363,13 +361,6 @@ body {
   border-radius: 999px;
 }
 
-@media (max-width: 700px) {
-  .project-card.featured {
-    grid-column: 1;
-    grid-row: auto;
-  }
-}
-
 .project-image {
   display: block;
   width: calc(100% + 48px);
@@ -379,6 +370,31 @@ body {
   object-fit: cover;
   border-radius: 8px 8px 0 0;
   border-bottom: 1px solid var(--border);
+}
+
+.featured-github {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 11px;
+  border: 1px solid rgba(240, 243, 246, 0.25);
+  border-radius: 999px;
+  background: rgba(10, 14, 20, 0.88);
+  color: #f0f3f6;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+  transition: border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.featured-github:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-1px);
 }
 
 .project-head {
@@ -437,6 +453,58 @@ a.project-link:hover {
   gap: 6px;
   margin-top: 12px;
   min-width: 0;
+}
+
+.project-cta-row {
+  align-items: flex-start;
+  margin-top: 18px;
+}
+
+.project-button,
+.other-projects-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  background: var(--accent);
+  color: var(--bg);
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 11px 14px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.project-button:hover,
+.other-projects-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 255, 157, 0.16);
+}
+
+.other-projects-toggle {
+  margin: 18px 0 16px;
+  background: transparent;
+  color: var(--accent);
+}
+
+.other-projects-icon {
+  transition: transform 0.15s ease;
+}
+
+.other-projects-toggle[aria-expanded="true"] .other-projects-icon {
+  transform: rotate(90deg);
+}
+
+.other-projects-grid[hidden] {
+  display: none;
+}
+
+.other-projects-grid > :first-child {
+  grid-column: 1 / -1;
 }
 
 .pills {
