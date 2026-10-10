@@ -144,27 +144,60 @@
 
   <section id="projects" class="section">
     <h2><span class="tag">03</span><span class="cmd">Ls -la <span class="cmd-target">Projects/</span></span></h2>
-    <div class="card project-card featured">
-      <span class="featured-badge">Flagship Project</span>
-      <a class="featured-github" href="https://github.com/IntouchKtakizawa/stagewrite-ai" target="_blank" rel="noopener noreferrer" aria-label="View StageWrite AI on GitHub">GitHub &#8599;</a>
-      <img class="project-image" src="images/stagewrite-ai.png" alt="StageWrite AI logo" loading="lazy">
-      <div class="project-head">
-        <h3>StageWrite AI</h3>
+    <div class="projects-grid">
+      <a class="card project-card" href="https://scratch.mit.edu/projects/893676050/" target="_blank" rel="noopener noreferrer">
+        <div class="project-head">
+          <h3>ZOMBIE Invader</h3>
+          <span class="project-link">scratch.mit.edu &#8599;</span>
+        </div>
+        <p>A zombie survival game built in Scratch (currently in open beta), exploring early programming logic and game design.</p>
+      </a>
+
+      <div class="card project-card featured">
+        <span class="featured-badge">Flagship Project</span>
+        <a class="featured-github" href="https://github.com/IntouchKtakizawa/stagewrite-ai" target="_blank" rel="noopener noreferrer" aria-label="View StageWrite AI on GitHub">GitHub &#8599;</a>
+        <img class="project-image" src="images/stagewrite-ai.png" alt="StageWrite AI logo" loading="lazy">
+        <div class="project-head">
+          <h3>StageWrite AI</h3>
+        </div>
+        <p>An all-in-one music writing assistant that helps musicians develop ideas instead of generating entire songs for them. It combines intelligent chord progression generation, chord recognition, interactive instrument diagrams, realistic playback, rhythm tools, a metronome, and MIDI features in one workspace.</p>
+        <p class="why-line"><strong>Why assist musicians, not replace them?</strong> Most AI music tools focus on generating finished music. I wanted StageWrite AI to work differently: I give it my musical ideas, and it helps me explore chords, voicings, rhythms, and arrangements while I stay in control of the actual composition.</p>
+        <div class="project-links project-cta-row">
+          <a href="https://intouchktakizawa.github.io/stagewrite-ai/" target="_blank" rel="noopener noreferrer" class="project-button">Open StageWrite AI &#8599;</a>
+        </div>
       </div>
-      <p>An all-in-one music writing assistant that helps musicians develop ideas instead of generating entire songs for them. It combines intelligent chord progression generation, chord recognition, interactive instrument diagrams, realistic playback, rhythm tools, a metronome, and MIDI features in one workspace.</p>
-      <p class="why-line"><strong>Why assist musicians, not replace them?</strong> Most AI music tools focus on generating finished music. I wanted StageWrite AI to work differently: I give it my musical ideas, and it helps me explore chords, voicings, rhythms, and arrangements while I stay in control of the actual composition.</p>
-      <div class="project-links project-cta-row">
-        <a href="https://intouchktakizawa.github.io/stagewrite-ai/" target="_blank" rel="noopener noreferrer" class="project-button">Open StageWrite AI &#8599;</a>
+
+      <div class="card project-card">
+        <div class="project-head">
+          <h3>AlgosTheComic</h3>
+        </div>
+        <p>A channel making fun fact videos that are interesting. Peaked at 10K views on YouTube and 4,421 views on Instagram.</p>
+        <button class="story-toggle" type="button" aria-expanded="false">
+          <span class="story-toggle-icon">&gt;</span> ./how-its-built.sh
+        </button>
+        <div class="story-content">
+          <div class="story-inner">
+            <p>
+              A fully automated content channel producing fun-fact videos on science and trivia
+              topics. Built an end-to-end pipeline &mdash; GPT generates scripts, ElevenLabs
+              handles voice narration, and an automation tool assembles the final video &mdash;
+              requiring no manual editing per episode.
+            </p>
+          </div>
+        </div>
+        <div class="project-links">
+          <a href="https://www.youtube.com/@AlgosTheComic" target="_blank" rel="noopener noreferrer" class="project-link">YouTube &#8599;</a>
+          <a href="https://www.instagram.com/algosthecomic/" target="_blank" rel="noopener noreferrer" class="project-link">Instagram &#8599;</a>
+        </div>
       </div>
     </div>
 
-    <button class="other-projects-toggle" id="other-projects-toggle" type="button" aria-expanded="false" aria-controls="other-projects">
-      <span class="other-projects-icon" aria-hidden="true">&gt;</span>
-      Other projects
+    <button class="story-toggle other-projects-toggle" type="button" aria-expanded="false" aria-controls="other-projects">
+      <span class="story-toggle-icon" aria-hidden="true">&gt;</span> Other projects
     </button>
-
-    <div class="projects-grid other-projects-grid" id="other-projects" hidden>
-      <div class="card project-card">
+    <div class="story-content other-projects-content" id="other-projects">
+      <div class="story-inner">
+        <div class="card project-card other-project-card">
         <img class="project-image" src="images/midpoint-demo.jpg" alt="Midpoint app showing a map with ranked meeting-point suggestions in Bangkok" loading="lazy">
         <div class="project-head">
           <h3>Midpoint</h3>
@@ -189,37 +222,6 @@
           <a href="https://midpointopensource.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-link">Live Demo &#8599;</a>
         </div>
       </div>
-
-      <a class="card project-card" href="https://scratch.mit.edu/projects/893676050/" target="_blank" rel="noopener noreferrer">
-        <div class="project-head">
-          <h3>ZOMBIE Invader</h3>
-          <span class="project-link">scratch.mit.edu &#8599;</span>
-        </div>
-        <p>A zombie survival game built in Scratch (currently in open beta), exploring early programming logic and game design.</p>
-      </a>
-
-      <div class="card project-card">
-        <div class="project-head">
-          <h3>AlgosTheComic</h3>
-        </div>
-        <p>A channel making fun fact videos that are interesting. Peaked at 10K views on YouTube and 4,421 views on Instagram.</p>
-        <button class="story-toggle" type="button" aria-expanded="false">
-          <span class="story-toggle-icon">&gt;</span> ./how-its-built.sh
-        </button>
-        <div class="story-content">
-          <div class="story-inner">
-            <p>
-              A fully automated content channel producing fun-fact videos on science and trivia
-              topics. Built an end-to-end pipeline &mdash; GPT generates scripts, ElevenLabs
-              handles voice narration, and an automation tool assembles the final video &mdash;
-              requiring no manual editing per episode.
-            </p>
-          </div>
-        </div>
-        <div class="project-links">
-          <a href="https://www.youtube.com/@AlgosTheComic" target="_blank" rel="noopener noreferrer" class="project-link">YouTube &#8599;</a>
-          <a href="https://www.instagram.com/algosthecomic/" target="_blank" rel="noopener noreferrer" class="project-link">Instagram &#8599;</a>
-        </div>
       </div>
     </div>
   </section>

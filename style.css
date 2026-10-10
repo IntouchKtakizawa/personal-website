@@ -316,7 +316,8 @@ body {
 /* Projects */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr 2fr;
+  grid-auto-flow: dense;
   align-items: start;
   gap: 16px;
 }
@@ -342,8 +343,9 @@ body {
 }
 
 .project-card.featured {
+  grid-column: 2;
+  grid-row: span 2;
   border-color: var(--accent-dim);
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.22);
 }
 
 .featured-badge {
@@ -359,6 +361,13 @@ body {
   letter-spacing: 0.04em;
   padding: 4px 10px;
   border-radius: 999px;
+}
+
+@media (max-width: 700px) {
+  .project-card.featured {
+    grid-column: 1;
+    grid-row: auto;
+  }
 }
 
 .project-image {
@@ -460,8 +469,7 @@ a.project-link:hover {
   margin-top: 18px;
 }
 
-.project-button,
-.other-projects-toggle {
+.project-button {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -479,32 +487,13 @@ a.project-link:hover {
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.project-button:hover,
-.other-projects-toggle:hover {
+.project-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(0, 255, 157, 0.16);
 }
 
 .other-projects-toggle {
-  margin: 18px 0 16px;
-  background: transparent;
-  color: var(--accent);
-}
-
-.other-projects-icon {
-  transition: transform 0.15s ease;
-}
-
-.other-projects-toggle[aria-expanded="true"] .other-projects-icon {
-  transform: rotate(90deg);
-}
-
-.other-projects-grid[hidden] {
-  display: none;
-}
-
-.other-projects-grid > :first-child {
-  grid-column: 1 / -1;
+  margin-top: 18px;
 }
 
 .pills {
@@ -680,6 +669,14 @@ a.project-link:hover {
 .story-content.is-open {
   max-height: 600px;
   opacity: 1;
+}
+
+.other-projects-content.is-open {
+  max-height: 1200px;
+}
+
+.other-project-card {
+  margin-top: 16px;
 }
 
 .story-inner {
