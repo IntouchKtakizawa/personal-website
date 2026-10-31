@@ -6,7 +6,9 @@
   --text-dim: #6b7688;
   --accent: #00ff9d;
   --accent-dim: #0a5c3f;
-  --mono: "SF Mono", "Fira Code", "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  --mono:
+    "SF Mono", "Fira Code", "JetBrains Mono", ui-monospace, Menlo, Consolas,
+    monospace;
 }
 
 * {
@@ -112,9 +114,15 @@ body {
   border-radius: 50%;
 }
 
-.dot-red { background: #ff5f56; }
-.dot-yellow { background: #ffbd2e; }
-.dot-green { background: #27c93f; }
+.dot-red {
+  background: #ff5f56;
+}
+.dot-yellow {
+  background: #ffbd2e;
+}
+.dot-green {
+  background: #27c93f;
+}
 
 .terminal-title {
   margin-left: 4px;
@@ -153,7 +161,9 @@ body {
 }
 
 @keyframes blink {
-  50% { opacity: 0; }
+  50% {
+    opacity: 0;
+  }
 }
 
 .location {
@@ -208,7 +218,10 @@ body {
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 24px;
-  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+  transition:
+    border-color 0.15s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
 .card p {
@@ -334,7 +347,9 @@ body {
   min-width: 0;
   text-decoration: none;
   color: var(--text);
-  transition: border-color 0.15s ease, transform 0.15s ease;
+  transition:
+    border-color 0.15s ease,
+    transform 0.15s ease;
 }
 
 .project-card:hover {
@@ -397,7 +412,10 @@ body {
   font-weight: 700;
   text-decoration: none;
   backdrop-filter: blur(8px);
-  transition: border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+  transition:
+    border-color 0.15s ease,
+    color 0.15s ease,
+    transform 0.15s ease;
 }
 
 .featured-github:hover {
@@ -484,7 +502,9 @@ a.project-link:hover {
   padding: 11px 14px;
   text-decoration: none;
   cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
 .project-button:hover {
@@ -613,7 +633,9 @@ a.project-link:hover {
   padding: 6px 12px;
   border-radius: 4px;
   cursor: pointer;
-  transition: background 0.15s ease, border-color 0.15s ease;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
 }
 
 .story-toggle:hover,
@@ -623,12 +645,17 @@ a.project-link:hover {
 }
 
 @keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 0 0 rgba(0, 255, 157, 0.5), 0 0 6px 1px rgba(0, 255, 157, 0.15);
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 0 rgba(0, 255, 157, 0.5),
+      0 0 6px 1px rgba(0, 255, 157, 0.15);
     transform: scale(1);
   }
   50% {
-    box-shadow: 0 0 0 7px rgba(0, 255, 157, 0), 0 0 10px 3px rgba(0, 255, 157, 0.35);
+    box-shadow:
+      0 0 0 7px rgba(0, 255, 157, 0),
+      0 0 10px 3px rgba(0, 255, 157, 0.35);
     transform: scale(1.03);
   }
 }
@@ -663,7 +690,9 @@ a.project-link:hover {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease, opacity 0.3s ease;
+  transition:
+    max-height 0.4s ease,
+    opacity 0.3s ease;
 }
 
 .story-content.is-open {
@@ -758,7 +787,10 @@ a.project-link:hover {
   border-radius: 999px;
   cursor: pointer;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-  transition: border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+  transition:
+    border-color 0.15s ease,
+    color 0.15s ease,
+    transform 0.15s ease;
 }
 
 .game-toggle-btn:hover {
@@ -864,7 +896,9 @@ a.project-link:hover {
   font-size: 1rem;
   border-radius: 6px;
   cursor: pointer;
-  transition: background 0.15s ease, border-color 0.15s ease;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
 }
 
 .game-btn:hover {

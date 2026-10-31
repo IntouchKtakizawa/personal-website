@@ -131,7 +131,8 @@ document.querySelectorAll(".story-toggle").forEach((button) => {
     dir = nextDir;
     const head = { x: snake[0].x + dir.x, y: snake[0].y + dir.y };
 
-    const hitsWall = head.x < 0 || head.x >= cols || head.y < 0 || head.y >= rows;
+    const hitsWall =
+      head.x < 0 || head.x >= cols || head.y < 0 || head.y >= rows;
     const hitsSelf = snake.some((s) => s.x === head.x && s.y === head.y);
 
     if (hitsWall || hitsSelf) {
