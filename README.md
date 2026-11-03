@@ -2,9 +2,21 @@
 
 Personal portfolio for Intouch Kenta Takizawa, a Year 10 IGCSE student and indie software developer in Bangkok.
 
+[Visit the portfolio](https://kentalabs.vercel.app) · [View the CV](cv/Kenta-Takizawa-CV.pdf)
+
+**Stack:** HTML, CSS, and a small JavaScript enhancement. **Status:** personal portfolio; project capabilities and limitations are described in the linked repositories.
+
 ## Preview
 
 Serve this directory with a static HTTP server. There is no build step, dependency install or API key. Main files: `index.html`, `style.css`, `script.js`. The page remains readable without JavaScript.
+
+```sh
+git clone https://github.com/IntouchKtakizawa/personal-website.git
+cd personal-website
+python3 -m http.server 8000
+```
+
+Open **http://localhost:8000**. This example requires Python 3. Check the project links and CV download after updating content.
 
 ## Content
 
