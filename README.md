@@ -1,8 +1,8 @@
 # Kenta Takizawa personal portfolio
 
-Personal portfolio for Intouch Kenta Takizawa, a Year 10 IGCSE student and indie software developer in Bangkok.
+Personal portfolio for Intouch Kenta Takizawa, an indie software developer in Bangkok.
 
-[Visit the portfolio](https://kentalabs.vercel.app) · [View the CV](cv/Kenta-Takizawa-CV.pdf)
+[Visit the portfolio](https://kentalabs.vercel.app)
 
 **Stack:** HTML, CSS, and a small JavaScript enhancement. **Status:** personal portfolio; project capabilities and limitations are described in the linked repositories.
 
@@ -16,12 +16,10 @@ cd personal-website
 python3 -m http.server 8000
 ```
 
-Open **http://localhost:8000**. This example requires Python 3. Check the project links and CV download after updating content.
+Open **http://localhost:8000**. This example requires Python 3. Check the project links after updating content.
 
 ## Content
 
 Selected projects link to their own repositories and live interfaces. StageWrite uses a local theory engine; Little World uses local simulation rules. JARVIS and live DebateAI features require their documented model/backend setup. Technologies are project experience, not professional proficiency ratings.
-
-`cv/` contains a one-page CV in PDF and editable Word formats. Update both together when education, contact details or project descriptions change. Keep experience claims specific and avoid adding unconfirmed dates or results.
 
 This repository is the personal portfolio, separate from the DevFoundry company site.
